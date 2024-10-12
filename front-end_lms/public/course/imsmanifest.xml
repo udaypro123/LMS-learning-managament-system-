@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="course_001" version="1.0" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 4th Edition</schemaversion>
+    </metadata>
+    <organizations default="org_001">
+        <organization identifier="org_001">
+            <item identifier="item_001" identifierref="resource_001">
+                <title>Sample SCORM 2004 Course</title>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="resource_001" type="webcontent" href="res/index.html">
+            <file href="res/index.html"/>
+            <file href="scorm/APIWrapper.js"/>
+            <file href="scorm/SCORM2004Functions.js"/>
+        </resource>
+    </resources>
+</manifest>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCORM 2004 Course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Welcome to SCORM 2004 Course</h1>
+    <p>Click the button below to start the course.</p>
+    <button id="start-button">Start Course</button>
+
+    <script type="module">
+        import { initializeCourse, endCourse } from '../scorm/SCORM2004Functions.js';
+
+        window.startCourse = function() {
+            // Call SCORM function to initialize
+            initializeCourse();
+        }
+
+        // When the page is unloaded, terminate SCORM session
+        window.onbeforeunload = function() {
+            endCourse();
+        };
+
+        // Add event listener for the button
+        document.getElementById('start-button').addEventListener('click', startCourse);
+    </script>
+</body>
+</html>
